@@ -26,7 +26,7 @@
   "homepage": "https://github.com/bcoe/release-please-action#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "release-please": "https://github.com/cdata/release-please.git#main"
+    "release-please": "https://github.com/cdata/release-please.git#9b72265a2b254945e5f0cfa5c92a123967e98dbe"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.27.0",
