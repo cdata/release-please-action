@@ -62,8 +62,10 @@ async function runManifest (command) {
       fork
     }
   )
+
+  // Create or update release PRs:
+  outputPRs(await manifest.createPullRequests())
   if (command !== 'manifest-pr') {
-    outputReleases(await manifest.createReleases())
     manifest = await Manifest.fromManifest(
       github,
       github.repository.defaultBranch,
@@ -74,9 +76,8 @@ async function runManifest (command) {
         fork
       }
     )
+    outputReleases(await manifest.createReleases())
   }
-  // Create or update release PRs:
-  outputPRs(await manifest.createPullRequests())
 }
 
 async function main () {
